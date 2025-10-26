@@ -41,7 +41,7 @@ class _MainPageState extends State<MainPage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background.jpg'),
+            image: AssetImage('assets/background3.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -205,15 +205,15 @@ class _MainPageState extends State<MainPage> {
     switch (selectedCycle) {
       case "Normal":
         water = 50;
-        time = 30;
+        time = 45;
         break;
       case "Heavy":
         water = 70;
-        time = 45;
+        time = 60;
         break;
       case "Quick":
         water = 30;
-        time = 20;
+        time = 15;
         break;
     }
     // through google search total water usage is loads multiple water
