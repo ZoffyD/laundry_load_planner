@@ -69,7 +69,7 @@ Reset button to reset everything back to ensure new data entry for next calculat
 
 
 
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/d72b9a97-8883-44c8-94f6-5e73849f0b6e" />
+
 
 (Eric Lee Shen Yi 299300)
 
