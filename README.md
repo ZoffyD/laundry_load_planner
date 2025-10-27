@@ -54,11 +54,6 @@ widget list used in this project are
 -ElevatedButton
 -SnackBar
 -SingleChildScrollView
--DecorationImage 
--EdgeInsets
--Border
--Navigator 
--MaterialPageRoute 
 
 Basic Validation Approach 
 - Show a snackbar message  if the textfield is empty
