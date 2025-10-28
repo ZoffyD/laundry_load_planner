@@ -35,7 +35,9 @@ Output
 - number of loads 
 - total water needed to be used 
 - total time needed to be used
-- Please enter a valid number for both 
+- if (clothes <=0 || capacity <=0) Please enter a valid number for both
+- if (capacity > 28) shows Max capacity of washing machine is 28kg .
+- if (clothes > 40) shows Max no. of clothes is 40 pieces.
 
 widget list used in this project are 
 -AppBar
@@ -60,7 +62,7 @@ Basic Validation Approach
 - Show a snackbar message if the textfield has invalid input
 - input is converted using int.tryParse(), to prevent apps crash if user enter 0
 - Ensure machine capacity will never be zero to avoid arithmetic error. 
-Reset button to reset everything back to ensure new data entry for next calculation.
+Reset button to reset everything back to ensure new data entry for the next calculation.
 
 
 ![WhatsApp Image 2025-10-26 at 17 12 24_44daa468](https://github.com/user-attachments/assets/db4d77c9-f7f9-4770-ac2f-0e4f906b7eb7) 
