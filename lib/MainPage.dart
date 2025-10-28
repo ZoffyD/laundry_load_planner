@@ -64,7 +64,13 @@ class _MainPageState extends State<MainPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        SizedBox(width: 175, child: Text("Number of Clothes:", style: TextStyle(fontSize: 16))),
+                        SizedBox(
+                          width: 175,
+                          child: Text(
+                            "Number of Clothes:",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ),
                         SizedBox(
                           width: 100,
                           child: TextField(
@@ -85,7 +91,10 @@ class _MainPageState extends State<MainPage> {
                       children: [
                         SizedBox(
                           width: 175,
-                          child: Text("Machine Capacity (kg):", style: TextStyle(fontSize: 16)),
+                          child: Text(
+                            "Machine Capacity (kg):",
+                            style: TextStyle(fontSize: 16),
+                          ),
                         ),
                         SizedBox(
                           width: 100,
@@ -107,7 +116,10 @@ class _MainPageState extends State<MainPage> {
                       children: [
                         SizedBox(
                           width: 175,
-                          child: Text("Machine Cycle Type:", style: TextStyle(fontSize: 16)),
+                          child: Text(
+                            "Machine Cycle Type:",
+                            style: TextStyle(fontSize: 16),
+                          ),
                         ),
                         DropdownButton<String>(
                           value: selectedCycle,
@@ -160,24 +172,22 @@ class _MainPageState extends State<MainPage> {
                     ),
                     SizedBox(height: 30),
                     if (results.isNotEmpty)
-                    
-                    Container(
-                      
-                      width: 500,
-                      padding: EdgeInsets.all(20.0),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.grey[200]
-                      ),
-                      child: Text(
-                        results,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                      Container(
+                        width: 500,
+                        padding: EdgeInsets.all(20.0),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(8.0),
+                          color: Colors.grey[200],
+                        ),
+                        child: Text(
+                          results,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
                   ],
                 ),
               ),
@@ -197,7 +207,28 @@ class _MainPageState extends State<MainPage> {
 
     if (capacity <= 0 || cloth <= 0) {
       SnackBar snackBar = const SnackBar(
-        content: Text('Please enter a valid number for both.', style: TextStyle(fontSize: 20)),
+        content: Text(
+          'Please enter a valid number for both.',
+          style: TextStyle(fontSize: 20),
+        ),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    } else if (capacity > 28  ) {
+      SnackBar snackBar = const SnackBar(
+        content: Text(
+          'Max capacity of washing machine is 28kg .',
+          style: TextStyle(fontSize: 20),
+        ),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    }else if (cloth > 40){
+      SnackBar snackBar = const SnackBar(
+        content: Text(
+          'Max no. of clothes is 40 pieces.',
+          style: TextStyle(fontSize: 20),
+        ),
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
       return;
@@ -216,7 +247,8 @@ class _MainPageState extends State<MainPage> {
         time = 15;
         break;
     }
-    // through google search total water usage is loads multiple water
+    // through google search 
+    //total water usage is loads multiple water
     // total time is loads multiple time
     int loads = (cloth / capacity).ceil();
     double totalWater = loads * water;
