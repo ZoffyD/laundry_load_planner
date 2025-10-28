@@ -7,8 +7,9 @@ It helps to estimate the number of loads needed to wash their clothes based on t
 Input -> Process -> output
 
 Input 
-- number of clothes 
-  ??0 and a if else method is used to handle the error. ??0 is to prevent user from typing any irrelevant message like String or fill nothing in the textField which is null, hence the if else method is used to display an error message for user to told them "Please enter a valid number for both" 
+- number of clothes
+  
+??0 and a if else method is used to handle the error. ??0 is to prevent user from typing any irrelevant message like String or fill nothing in the textField which is null, hence the if else method is used to display an error message for user to told them "Please enter a valid number for both" 
 
 - washing machine capacity (kg)
 - type of wash cycle ( according to google search n goolge ai answer )
